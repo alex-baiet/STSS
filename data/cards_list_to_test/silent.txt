@@ -1,0 +1,32 @@
+Survivor;Survivor.png;Starter;Skill;1;Gain 8(11) Block. Discard a card.;
+Acrobatics;Acrobatics.png;Common;Skill;1;Draw 3(4) cards. Discard 1 card.;
+Dagger Throw;R_dagger-throw.png;Common;Attack;1;Deal 9(12) damage. Draw 1 card. Discard 1 card.;
+Prepared;Prepared.png;Common;Skill;0;Draw 1(2) card(s). Discard 1(2) card(s).;
+Sneaky Strike;SneakyStrike.png;Common;Attack;2;Deal 12(16) damage. If you have discarded a card this turn, gain 2 Energy.;
+All-Out Attack;All-OutAttack.png;Uncommon;Attack;1;Deal 10(14) damage to ALL enemies. Discard 1 card at random.;
+Calculated Gamble;CalculatedGamble.png;Uncommon;Skill;0;Discard your hand, then draw that many cards. Exhaust. (Don't exhaust);
+Concentrate;Concentrate.png;Uncommon;Skill;0;Discard 3(2) cards. Gain 2 Energy.;
+Escape Plan;EscapePlan.png;Uncommon;Skill;0;Draw 1 card. If the card is a Skill, gain 3(5) Block.;
+Eviscerate;Eviscerate.png;Uncommon;Attack;3;Costs 1 less Energy for each card discarded this turn. Deal 7(9) damage three times.;
+Reflex;Reflex.png;Uncommon;Skill;;Unplayable. If this card is discarded from your hand, draw 2(3) cards.;
+Setup;Setup.png;Uncommon;Skill;1(0);Place a card in your hand on top of your draw pile. It costs 0 until it is played.;
+Tactician;Tactician.png;Uncommon;Skill;;Unplayable. If this card is discarded from your hand, gain 1(2) Energy.;
+Well-Laid Plans;Well-LaidPlans.png;Uncommon;Power;1;At the end of your turn, Retain up to 1(2) card(s).;
+Nightmare;Nightmare.png;Rare;Skill;3(2);Choose a card. Next turn, add 3 copies of that card into your hand. Exhaust.;
+Storm of Steel;StormofSteel.png;Rare;Skill;1;Discard your hand. Add 1 Shiv(+) to your hand for each card discarded.;
+Tools of the Trade;ToolsoftheTrade.png;Rare;Power;1(0);At the start of your turn, draw 1 card and discard 1 card.;
+Unload;Unload.png;Rare;Attack;1;Deal 14(18) damage. Discard all non-Attack cards.;
+
+
+Effets chiants :
+discard a card
+discard random card
+nightmare
+toolsOfTheTrade
+
+effets deplacement carte d'un pile a une autre :
+selectionCard=random/manual
+selectionPile=hand/draw/exhaust/discard
+destinationPile=hand/draw/exhaust/discard
+selectionCardCount=X
+

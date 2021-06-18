@@ -1,0 +1,27 @@
+Headbutt;Headbutt.png;Common;Attack;1;Deal 9(12) damage. Place a card from your discard pile on top of your draw pile.;
+Warcry;Warcry.png;Common;Skill;0;Draw 1(2) card(s). Place a card from your hand on top of your draw pile. Exhaust.;
+Burning Pact;BurningPact.png;Uncommon;Skill;1;Exhaust 1 card. Draw 2(3) cards.;
+Dual Wield;DualWield.png;Uncommon;Skill;1;Create a(2) copy(s) of an Attack or Power card in your hand.;
+Infernal Blade;InfernalBlade.png;Uncommon;Skill;1(0);Add a random Attack to your hand. It costs 0 this turn. Exhaust.;
+Second Wind;SecondWind.png;Uncommon;Skill;1;Exhaust all non-Attack cards in your hand and gain 5(7) Block for each.;
+Exhume;Exhume.png;Rare;Skill;1(0);Place a card from your Exhaust pile into your hand. Exhaust.;
+Fiend Fire;FiendFire.png;Rare;Attack;2;Exhaust your hand. Deal 7(10) damage for each Exhausted card. Exhaust.;
+
+    ##### A RETIRER DU JEU #####
+Searing Blow;SearingBlow.png;Uncommon;Attack;2;Deal 12(16) damage. Can be upgraded any number of times.;
+
+infernal blade : 
+addRandomAttackClass=Ironclad
+addedCardCost=0
+
+second wind
+exhaustHandCategory=ATTACK
+reverseSelection=1
+blockForEachExhaust=5
+
+fiend fire :
+exhaustHand=1
+damageForEachExhaust=7
+
+rampage :
+bonusDamageOnPlayBattle=5

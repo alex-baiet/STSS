@@ -1,0 +1,13 @@
+Discovery;Discovery.png;Uncommon;Skill;1;Choose 1 of 3 random cards to add to your hand. It costs 0 this turn. Exhaust. (Don't Exhaust.);
+Forethought;Forethought.png;Uncommon;Skill;0;Place a card(any number of cards) from your hand on the bottom of your draw pile. It (They) costs 0 until played.;
+Purity;Purity.png;Uncommon;Skill;0;Choose and exhaust 3(5) cards in your hand. Exhaust.;
+Sadistic Nature;SadisticNature.png;Rare;Power;0;Whenever you apply a Debuff to an enemy, they take 5(7) damage.;
+Secret Technique;SecretTechnique.png;Rare;Skill;0;Choose a Skill from your draw pile and place it into your hand. Exhaust. (Don't Exhaust);
+Secret Weapon;SecretWeapon.png;Rare;Skill;0;Choose an Attack from your draw pile and place it into your hand. Exhaust. (Don't Exhaust);
+Thinking Ahead;ThinkingAhead.png;Rare;Skill;0;Draw 2 cards. Place a card from your hand on top of your draw pile. Exhaust. (Don't Exhaust);
+Violence;Violence.png;Rare;Skill;0;Place 3(4) random Attack cards from your draw pile into your hand. Exhaust.;
+
+##### NE VAS JAMAIS ETRE INTEGRE #####
+Apotheosis;Apotheosis.png;Rare;Skill;2(1);Upgrade ALL of your cards for the rest of combat. Exhaust.;
+
+

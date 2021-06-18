@@ -1,0 +1,154 @@
+name=Ancient Potion
+imagePath=AncientPotion.png
+description=Gain 1 Artifact.
+rarity=Uncommon
+artifact=1
+#
+name=Block Potion
+imagePath=BlockPotion.png
+description=Gain 12 Block.
+rarity=Common
+block=12
+#
+name=Blood Potion
+imagePath=BloodPotion.png
+description=Heal for 20% of your Max HP.
+rarity=Common
+healRatio=0.2
+#
+name=Cultist Potion
+imagePath=CultistPotion.png
+description=Gain 1 Ritual.
+rarity=Rare
+ritual=1
+#
+name=Cunning Potion
+imagePath=CunningPotion.png
+description=Add 4 Shivs to your hand.
+rarity=Uncommon
+addCardToPile=Shiv
+addCardToPileNbr=4
+targetPile=hand
+#
+name=Dexterity Potion
+imagePath=DexterityPotion.png
+description=Gain 2 Dexterity.
+rarity=Common
+dexterity=2
+#
+name=Distilled Chaos
+imagePath=DistilledChaos.png
+description=Play the top 3 cards of your draw pile.
+rarity=Uncommon
+playTopDrawPileCard=3
+#
+name=Energy Potion
+imagePath=EnergyPotion.png
+description=Gain 2 Energy.
+rarity=Common
+energyGain=2
+#
+name=Entropic Brew
+imagePath=EntropicBrew.png
+description=Fill all your empty potion slots with random potions.
+rarity=Rare
+fillEmptyPotion=99
+#
+name=Essence of Steel
+imagePath=EssenceOfSteel.png
+description=Gain 4 Plated Armor.
+rarity=Uncommon
+platedArmor=4
+#
+name=Explosive Potion
+imagePath=ExplosivePotion.png
+description=Deal 10 damage to all enemies.
+rarity=Common
+target=all
+damage=10
+#
+name=Fairy in a Bottle
+imagePath=FairyInABottle.png
+description=When you would die, heal to 30% of your Max HP instead and discard this potion.
+rarity=Rare
+resurrect=0.3
+#
+name=Fear Potion
+imagePath=FearPotion.png
+description=Apply 3 Vulnerable.
+rarity=Common
+vulnerable=3
+#
+name=Fire Potion
+imagePath=FirePotion.png
+description=Deal 20 Damage to target enemy.
+rarity=Common
+damage=20
+#
+name=Fruit Juice
+imagePath=FruitJuice.png
+description=Gain 5 Max HP
+rarity=Rare
+gainMaxLife=5
+#
+name=Ghost in a Jar
+imagePath=GhostInAJar.png
+description=Gain 1 Intangible.
+rarity=Rare
+intangible=1
+#
+name=Heart of Iron
+imagePath=HeartOfIron.png
+description=Gain 6 metallicize.
+rarity=Rare
+metallicize=6
+#
+name=Liquid Memories
+imagePath=LiquidMemories.png
+description=Choose a card in your discard pile and return it to your hand. It costs 0 this turn.
+rarity=Uncommon
+#
+name=Poison Potion
+imagePath=PoisonPotion.png
+description=Apply 6 Poison to target enemy.
+rarity=Common
+poison=6
+#
+name=Regen Potion
+imagePath=RegenPotion.png
+description=Gain 5 Regeneration.
+rarity=Uncommon
+regeneration=5
+#
+name=Speed Potion
+imagePath=SpeedPotion.png
+description=Gain 5 Dexterity. At the end of your turn, lose 5 Dexterity.
+rarity=Common
+dexterity=5
+dexterityDown=5
+#
+name=Flex Potion
+imagePath=FlexPotion.png
+description=Gain 5 Strength. At the end of your turn, lose 5 Strength.
+rarity=Common
+strength=5
+strengthDown=5
+#
+name=Strength Potion
+imagePath=StrengthPotion.png
+description=Gain 2 Strength.
+rarity=Common
+strength=2
+#
+name=Swift Potion
+imagePath=SwiftPotion.png
+description=Draw 3 cards.
+rarity=Common
+draw=3
+#
+name=Weak Potion
+imagePath=WeakPotion.png
+description=Apply 3 weak.
+rarity=Common
+weak=3
+#

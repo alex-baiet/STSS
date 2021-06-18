@@ -1,0 +1,851 @@
+name=Bash
+imagePath=Bash.png
+class=Ironclad
+rarity=Starter
+category=Attack
+energyCost=2
+description=Deal 8 damage. Apply 2 Vulnerable.
+
+damage=8
+vulnerable=2
+#
+name=Defend
+imagePath=Defend_R.png
+class=Ironclad
+rarity=Starter
+category=Skill
+energyCost=1
+description=Gain 5 Block.
+
+block=5
+#
+name=Strike
+imagePath=Strike_R.png
+class=Ironclad
+rarity=Starter
+category=Attack
+energyCost=1
+description=Deal 6 damage.
+
+damage=6
+#
+name=Ironclad Defend
+imagePath=Defend_R.png
+class=Ironclad
+rarity=Starter
+category=Skill
+energyCost=1
+description=Gain 5 Block.
+
+block=5
+#
+name=Ironclad Strike
+imagePath=Strike_R.png
+class=Ironclad
+rarity=Starter
+category=Attack
+energyCost=1
+description=Deal 6 damage.
+
+damage=6
+#
+name=Anger
+imagePath=Anger.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=0
+description=Deal 6 damage. Add a copy of this card to your discard pile.
+
+damage=6
+addCardToPile=Anger
+targetPile=discard
+#
+name=Armaments
+imagePath=Armaments.png
+class=Ironclad
+rarity=Common
+category=Skill
+energyCost=1
+description=Gain 5 Block. Upgrade a card in your hand for the rest of combat.
+
+block=5
+upgradeACardHand=1
+#
+name=Body Slam
+imagePath=BodySlam.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal damage equal to your current Block.
+
+damageIsBlock=1
+#
+name=Clash
+imagePath=Clash.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=0
+description=Can only be played if every card in your hand is an Attack. Deal 14 damage.
+
+damage=14
+requireHandFullOfCategory=Attack
+#
+name=Cleave
+imagePath=Cleave.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 8 damage to ALL enemies.
+
+damage=8
+target=all
+#
+name=Clothesline
+imagePath=Clothesline.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=2
+description=Deal 12 damage. Apply 2 Weak.
+
+damage=12
+weak=2
+#
+name=Flex
+imagePath=Flex.png
+class=Ironclad
+rarity=Common
+category=Skill
+energyCost=0
+description=Gain 2 Strength. At the end of your turn, lose 2 Strength.
+
+strength=2
+strengthDown=2
+#
+name=Havoc
+imagePath=Havoc.png
+class=Ironclad
+rarity=Common
+category=Skill
+energyCost=1
+description=Play the top card of your draw pile and Exhaust it.
+
+playTopDrawPileCard=1
+playedCardExhaust=1
+#
+name=Headbutt
+imagePath=Headbutt.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 9 damage. Place a card from your discard pile on top of your draw pile.
+
+damage=9
+transferAnyCardDisardPileToTopDrawPile=1
+#
+name=Heavy Blade
+imagePath=HeavyBlade.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=2
+description=Deal 14 damage. Strength affects Heavy Blade 3 times.
+
+damage=14
+strengthAffect=3
+#
+name=Iron Wave
+imagePath=IronWave.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=1
+description=Gain 5 Block. Deal 5 damage.
+
+damage=5
+block=5
+#
+name=Perfected Strike
+imagePath=PerfectedStrike.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=2
+description=Deal 6 damage. Deals an additional 2 damage for ALL of your cards containing "Strike".
+
+damage=6
+bonusDamageFromStrike=2
+#
+name=Pommel Strike
+imagePath=PommelStrike.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 9 damage. Draw 1 card.
+
+damage=9
+draw=1
+#
+name=Shrug it Off
+imagePath=ShrugItOff.png
+class=Ironclad
+rarity=Common
+category=Skill
+energyCost=1
+description=Gain 8 Block. Draw 1 card.
+
+block=8
+draw=1
+#
+name=Sword Boomerang
+imagePath=SwordBoomerang.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 3 damage to a random enemy 3 times.
+
+damage=3
+target=random
+attackNbr=3
+#
+name=Thunderclap
+imagePath=Thunderclap.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 4 damage and apply 1 Vulnerable to ALL enemies.
+
+damage=4
+vulnerable=1
+target=all
+#
+name=True Grit
+imagePath=TrueGrit.png
+class=Ironclad
+rarity=Common
+category=Skill
+energyCost=1
+description=Gain 7 Block. Exhaust a random card from your hand.
+
+block=7
+exhaustRandomCardFromHand=1
+#
+name=Twin Strike
+imagePath=TwinStrike.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 5 damage twice.
+
+damage=5
+attackNbr=2
+#
+name=Warcry
+imagePath=Warcry.png
+class=Ironclad
+rarity=Common
+category=Skill
+energyCost=0
+description=Draw 1 card. Place a card from your hand on top of your draw pile. Exhaust.
+
+draw=1
+transferCardFromHandToTopDrawPile=1
+exhaust=1
+#
+name=Wild Strike
+imagePath=WildStrike.png
+class=Ironclad
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 12 damage. Shuffle a Wound into your draw pile.
+
+damage=12
+addCardToPile=Wound
+targetPile=draw
+addCardToTopPile=0
+#
+name=Battle Trance
+imagePath=BattleTrance.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Draw 3 cards. You cannot draw additional cards this turn.
+
+draw=3
+noDraw=1
+#
+name=Blood for Blood
+imagePath=BloodforBlood.png
+class=Ironclad
+rarity=Uncommon
+category=Attack
+energyCost=4
+description=Cost 1 less energy for each time you lose HP in combat. Deal 18 damage.
+
+damage=18
+costBonusForEachWound=-1
+#
+name=Bloodletting
+imagePath=Bloodletting.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Lose 3 HP. Gain 1 Energy.
+
+energyGain=1
+heal=-3
+#
+name=Burning Pact
+imagePath=BurningPact.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Exhaust 1 card. Draw 2 cards.
+
+draw=2
+exhaustFromHand=1
+#
+name=Carnage
+imagePath=Carnage.png
+class=Ironclad
+rarity=Uncommon
+category=Attack
+energyCost=2
+description=Ethereal. Deal 20 damage.
+
+damage=20
+ethereal=1
+#
+name=Combust
+imagePath=Combust.png
+class=Ironclad
+rarity=Uncommon
+category=Power
+energyCost=1
+description=At the end of your turn, lose 1 HP and deal 5 damage to ALL enemies.
+
+regenerate=-1
+combust=5
+#
+name=Dark Embrace
+imagePath=DarkEmbrace.png
+class=Ironclad
+rarity=Uncommon
+category=Power
+energyCost=2
+description=Whenever a card is Exhausted, draw 1 card.
+
+darkEmbrace=1
+#
+name=Disarm
+imagePath=Disarm.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Enemy loses 2 Strength. Exhaust.
+
+damageStrength=2
+exhaust=1
+#
+name=Dropkick
+imagePath=Dropkick.png
+class=Ironclad
+rarity=Uncommon
+category=Attack
+energyCost=1
+description=Deal 5 damage. If the enemy is Vulnerable, gain 1 energy and draw 1 card.
+
+damage=5
+drawBonus=1
+energyGainBonus=1
+conditionBonus=vulnerable_on_enemy
+#
+name=Dual Wield
+imagePath=DualWield.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Create a copy of an Attack or Power card in your hand.
+
+copyAttackOrPowerFromHand=1
+#
+name=Entrench
+imagePath=Entrench.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=2
+description=Double your current Block.
+
+blockMultiplier=2
+#
+name=Evolve
+imagePath=Evolve.png
+class=Ironclad
+rarity=Uncommon
+category=Power
+energyCost=1
+description=Whenever you draw a Status, draw 1 card.
+
+evolve=1
+#
+name=Feel No Pain
+imagePath=FeelNoPain.png
+class=Ironclad
+rarity=Uncommon
+category=Power
+energyCost=1
+description=Whenever a card is Exhausted, gain 3 Block.
+
+feelNoPain=3
+#
+name=Fire Breathing
+imagePath=FireBreathing.png
+class=Ironclad
+rarity=Uncommon
+category=Power
+energyCost=1
+description=Whenever you draw a Status or Curse card,  deal 6 damage to all enemies.
+
+fireBreathing=6
+#
+name=Flame Barrier
+imagePath=FlameBarrier.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=2
+description=Gain 12 Block. Whenever you are attacked this turn, deal 4 damage to the attacker.
+
+block=12
+flameBarrier=4
+#
+name=Ghostly Armor
+imagePath=GhostlyArmor.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Ethereal. Gain 10 Block.
+
+block=10
+ethereal=1
+#
+name=Hemokinesis
+imagePath=Hemokinesis.png
+class=Ironclad
+rarity=Uncommon
+category=Attack
+energyCost=1
+description=Lose 3 HP. Deal 14 damage.
+
+damage=14
+heal=-3
+#
+name=Infernal Blade
+imagePath=InfernalBlade.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Add a random Attack to your hand. It costs 0 this turn. Exhaust.
+
+addFreeRandomAttack=1
+exhaust=1
+#
+name=Inflame
+imagePath=Inflame.png
+class=Ironclad
+rarity=Uncommon
+category=Power
+energyCost=1
+description=Gain 2 Strength.
+
+strength=2
+#
+name=Intimidate
+imagePath=Intimidate.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Apply 1 Weak to ALL enemies. Exhaust.
+
+weak=1
+target=all
+exhaust=1
+#
+name=Metallicize
+imagePath=Metallicize.png
+class=Ironclad
+rarity=Uncommon
+category=Power
+energyCost=1
+description=At the end of your turn, gain 3 Block.
+
+metallicize=3
+#
+name=Power Through
+imagePath=PowerThrough.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Add 2 Wounds to your hand. Gain 15 Block.
+
+block=15
+addCardToPile=Wound
+targetPile=hand
+addCardToPileNbr=2
+#
+name=Pummel
+imagePath=Pummel.png
+class=Ironclad
+rarity=Uncommon
+category=Attack
+energyCost=1
+description=Deal 2 damage 4 times. Exhaust.
+
+damage=2
+attackNbr=4
+exhaust=1
+#
+name=Rage
+imagePath=Rage.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Whenever you play an Attack this turn, gain 3 Block
+
+rage=3
+#
+name=Rampage
+imagePath=Rampage.png
+class=Ironclad
+rarity=Uncommon
+category=Attack
+energyCost=1
+description=Deal 8 damage. Every time this card is played, increase its damage by 5 for this combat.
+
+damage=8
+upgradeDamage=5
+#
+name=Reckless Charge
+imagePath=RecklessCharge.png
+class=Ironclad
+rarity=Uncommon
+category=Attack
+energyCost=0
+description=Deal 7 damage. Shuffle a Dazed into your draw pile
+
+damage=7
+addCardToPile=Dazed
+addCardToTopPile=0
+targetPile=draw
+#
+name=Rupture
+imagePath=Rupture.png
+class=Ironclad
+rarity=Uncommon
+category=Power
+energyCost=1
+description=Whenever you lose HP from a card, gain 1 Strength.
+
+rupture=1
+#
+name=Searing Blow
+imagePath=SearingBlow.png
+class=Ironclad
+rarity=Uncommon
+category=Attack
+energyCost=2
+description=Deal 12 damage. Can be upgraded any number of times.
+
+damage=12
+unlimitedUpgrade=1
+#
+name=Second Wind
+imagePath=SecondWind.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Exhaust all non-Attack cards in your hand and gain 5 Block for each.
+
+secondWind=5
+#
+name=Seeing Red
+imagePath=SeeingRed.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Gain 2 energy. Exhaust.
+
+energyGain=2
+exhaust=1
+#
+name=Sentinel
+imagePath=Sentinel.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Gain 5 Block. If this card is Exhausted, gain 2 energy.
+
+energyGainBonus=2
+conditionBonus=exhaust_self
+#
+name=Sever Soul
+imagePath=SeverSoul.png
+class=Ironclad
+rarity=Uncommon
+category=Attack
+energyCost=2
+description=Exhaust all non-Attack cards in your hand. Deal 16 damage.
+
+exhaustHandCategory=ATTACK
+reverseSelection=1
+damage=16
+#
+name=Shockwave
+imagePath=Shockwave.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=2
+description=Apply 3 Weak and Vulnerable to ALL enemies. Exhaust.
+
+weak=3
+vulnerable=3
+target=all
+exhaust=1
+#
+name=Spot Weakness
+imagePath=SpotWeakness.png
+class=Ironclad
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=If an enemy intends to attack, gain 3 Strength.
+
+strengthBonus=3
+conditionBonus=target_attacking
+#
+name=Uppercut
+imagePath=Uppercut.png
+class=Ironclad
+rarity=Uncommon
+category=Attack
+energyCost=2
+description=Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable.
+
+damage=13
+weak=1
+vulnerable=1
+#
+name=Whirlwind
+imagePath=Whirlwind.png
+class=Ironclad
+rarity=Uncommon
+category=Attack
+energyCost=-1
+description=Deal 5 damage to ALL enemies X times.
+
+damage=5
+attackNbrX=1
+target=all
+#
+name=Barricade
+imagePath=Barricade.png
+class=Ironclad
+rarity=Rare
+category=Power
+energyCost=3
+description=Block no longer expires at the start of your turn.
+
+barricade=1
+#
+name=Berserk
+imagePath=Berserk.png
+class=Ironclad
+rarity=Rare
+category=Power
+energyCost=0
+description=Gain 2 Vulnerable. Gain 1 Energy at the start of your turn.
+
+selfVulnerable=2
+berserk=1
+#
+name=Bludgeon
+imagePath=Bludgeon.png
+class=Ironclad
+rarity=Rare
+category=Attack
+energyCost=3
+description=Deal 32 damage.
+
+damage=32
+#
+name=Brutality
+imagePath=Brutality.png
+class=Ironclad
+rarity=Rare
+category=Power
+energyCost=0
+description= At the start of your turn, lose 1 HP and draw 1 card.
+
+brutality=1
+#
+name=Corruption
+imagePath=Corruption.png
+class=Ironclad
+rarity=Rare
+category=Power
+energyCost=3
+description=Skills cost 0. Whenever you play a Skill, Exhaust it.
+
+corruption=1
+#
+name=Demon Form
+imagePath=DemonForm.png
+class=Ironclad
+rarity=Rare
+category=Power
+energyCost=3
+description=At the start of each turn, gain 2 Strength.
+
+demonForm=2
+#
+name=Double Tap
+imagePath=DoubleTap.png
+class=Ironclad
+rarity=Rare
+category=Skill
+energyCost=1
+description=This turn, your next Attack is played twice.
+
+doubleTap=1
+#
+name=Exhume
+imagePath=Exhume.png
+class=Ironclad
+rarity=Rare
+category=Skill
+energyCost=1
+description=Place a card from your Exhaust pile into your hand. Exhaust.
+
+drawExhaust=1
+exhaust=1
+#
+name=Feed
+imagePath=Feed.png
+class=Ironclad
+rarity=Rare
+category=Attack
+energyCost=1
+description=Deal 10 damage. If this kills a non-minion enemy, gain 3 permanent Max HP. Exhaust.
+
+damage=10
+maxLifeBonus=3
+conditionBonus=kill
+exhaust=1
+#
+name=Fiend Fire
+imagePath=FiendFire.png
+class=Ironclad
+rarity=Rare
+category=Attack
+energyCost=2
+description=Exhaust your hand. Deal 7 damage for each Exhausted card. Exhaust.
+
+fiendFire=1
+exhaust=1
+#
+name=Immolate
+imagePath=Immolate.png
+class=Ironclad
+rarity=Rare
+category=Attack
+energyCost=2
+description=Deal 21 damage to ALL enemies. Add a Burn to your discard pile.
+
+damage=21
+target=all
+addCardToPile=Burn
+targetPile=discard
+#
+name=Impervious
+imagePath=Impervious.png
+class=Ironclad
+rarity=Rare
+category=Skill
+energyCost=2
+description=Gain 30 Block. Exhaust.
+
+block=30
+exhaust=1
+#
+name=Juggernaut
+imagePath=Juggernaut.png
+class=Ironclad
+rarity=Rare
+category=Power
+energyCost=2
+description=Whenever you gain Block, deal 5 damage to a random enemy.
+
+juggernaut=5
+#
+name=Limit Break
+imagePath=LimitBreak.png
+class=Ironclad
+rarity=Rare
+category=Skill
+energyCost=1
+description=Double your Strength. Exhaust.
+
+strengthMultiplier=2
+exhaust=1
+#
+name=Offering
+imagePath=Offering.png
+class=Ironclad
+rarity=Rare
+category=Skill
+energyCost=0
+description=Lose 6 HP. Gain 2 energy. Draw 3 cards. Exhaust.
+
+heal=-6
+energyGain=2
+draw=3
+exhaust=1
+#
+name=Reaper
+imagePath=Reaper.png
+class=Ironclad
+rarity=Rare
+category=Attack
+energyCost=2
+description=Deal 4 damage to ALL enemies. Heal for unblocked damage dealt. Exhaust.
+
+damage=4
+target=all
+vampirism=1
+exhaust=1
+#

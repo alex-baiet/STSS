@@ -1,0 +1,11 @@
+name=Shiv
+imagePath=Shiv.png
+class=None
+rarity=Null
+category=Attack
+energyCost=0
+description=Deal 4 damage. Exhaust.
+
+damage=4
+exhaust=1
+#

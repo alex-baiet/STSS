@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1584</x>
+      <y>636</y>
+      <w>192</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Enemy
+--
+-strategy: Strategy
+-nextAct: Action
+--
++prepareAct(): void
++act(Hero hero, ArrayList&lt;Enemy&gt; allies): void
++checkChangeStrategy(List&lt;Enemy&gt; allies): void
++buffFromHeroAction(Card cardPlayed): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1482</x>
+      <y>180</y>
+      <w>276</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>EnemyAction
+--
+
+--
++applyEffects(user: Enemy, hero: Hero, allies: ArrayList&lt;Enemy&gt;): void
++applyEffectsHero(user: Enemy, hero: Hero): void
++applyEffectsUser(user: Enemy): void
++copy(): EnemyAction</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1464</x>
+      <y>636</y>
+      <w>96</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Hero
+--
+-gold: int
+-maxEnergy: int
+-energy: int
+-deck: Deck
+-potions: Potion[]
+--
++prepareBattle(): void
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1524</x>
+      <y>516</y>
+      <w>90</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>/AbstractEntity/
+--
+-name: String
+-life: int
+-maxLife: int
+-imgPath: String
+-img: BufferedImage
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1650</x>
+      <y>468</y>
+      <w>108</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Entity
+--
++name(): String
++imgPath(): String
++img(): BufferedImage
++attack(action: Action): int
++damage(damage: int): int
++newTurn(): void
++endTurn(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1566</x>
+      <y>474</y>
+      <w>144</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1566</x>
+      <y>594</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;190.0;40.0;190.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1506</x>
+      <y>594</y>
+      <w>78</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;110.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1410</x>
+      <y>642</y>
+      <w>66</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r1=deck
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>846</y>
+      <w>234</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Map
+--
+-map: Map
+-playerTransition: int
+-nodeTransitions: HashMap&lt;Integer, ArrayList&lt;Integer&gt;&gt;
+-nodeType: HashMap&lt;Integer, RoomType&gt;
+--
+-Map(): Map
++getInstance(): static Map
++resetInstance(): static Map
++movePlayer(destination: int): boolean
++type(node: int): RoomType
++getPlayerPosition(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1122</x>
+      <y>636</y>
+      <w>294</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>Deck
+--
+-user: Hero
+-cards: ArrayList&lt;Card&gt;
+-drawPile: ArrayList&lt;Card&gt;
+-discardPile: ArrayList&lt;Card&gt;
+-exhaustPile: ArrayList&lt;Card&gt;
+-hand: ArrayList&lt;Card&gt;
+--
+-prepareDeck(): void
+-shuffleDeck(): void
+-addCard(card: Card): void
+-addCardToPile(card: Card, pile: DeckPile, onTop: boolean)
+-endTurn(): void
+-clear(): void
+-draw(): Card
+-playCard(enemies: List&lt;Enemy&gt;, numCardPlayed: int, numTarget: int): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>576</y>
+      <w>192</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>RunManager
+--
+-actualScene: static Scene
+-context: static ApplicationContext
+-hero: static Hero
+-widthScreen: static int
+-heightScreen: static int
+--
++main(): static void
+-game(context: ApplicationContext): static void
+-loadScene(scene Scene): static void
+-tryExitGame(event: Event): static void
++isLetter(key: KeyboardKey): static boolean
++getWidthScreen(): static int
++getHeightScreen(): static int
++inDebugMod(): static boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1200</x>
+      <y>324</y>
+      <w>90</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Potion
+--
+-imagePath: String
+-img: BufferedImage
+--
++img(): BufferedImage
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>426</x>
+      <y>12</y>
+      <w>174</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>FileManager
+--
+
+--
++loadFile(fileName: String): static void
++loadImage(fileName: String): static void
++getFileValue(text: String): static void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>438</x>
+      <y>102</y>
+      <w>138</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>GraphicsHelper
+--
+
+--
++drawImage(): static void
++drawImageContain(): static void
++drawImageFill(): static void
++drawText(): static void
++setFontDefault(): static void
++setFontSize(): static void
++setFontStyle(): static void
++setFontName(): static void
++setFont(): static void
++drawButtonArray(): static void
++fiilRect(): static void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>324</y>
+      <w>108</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>EnemyData
+--
+-name: String
+-imgPath: String
+-minStartLife: int
+-maxStartLife: int
+-strategy: Strategy
+--
++createEnemy(): Enemy</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>846</x>
+      <y>294</y>
+      <w>216</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Cette UML est une version simplifié du projet.
+
+Beaucoup de fonctions existances n'ont pas été écrites
+car leurs effets était mineures ou sans intérêts dans 
+l'organisation du projet.
+
+Seul les fonctions/variables les plus importantes ont 
+été écrites ici.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1122</x>
+      <y>600</y>
+      <w>102</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>"DeckPile"
+est un enum pour 
+cibler une pile de carte.
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1326</x>
+      <y>324</y>
+      <w>96</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>Card
+--
+-imagePath: String
+-img: BufferedImage
+-classCard: ClassCard
+-category: Category
+-energyCost: int
+-exhaust: boolean
+--
++img(): BufferedImage</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1374</x>
+      <y>0</y>
+      <w>192</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Action
+--
+-name: String
+-description: String
+-damage: int
+-block: int
+--
++Action(data String): Action
++applyEffects(user: Entity, enemy: Entity)
++applyEffectsEnemy(user: Entity, enemy: Entity)
++applyEffectsUser(user: Entity)
++needTarget(): boolean
++getIntentsString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1188</x>
+      <y>186</y>
+      <w>276</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>HeroAction
+--
+-target: Target
+-draw: int
+--
++applyEffects(user: Hero, enemies: List&lt;Enemy&gt;, numTarget: int): void
++applyEffectsHero(user: Enemy, hero: Hero): void
++applyEffectsUser(user: Enemy): void
++copy(): EnemyAction</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1314</x>
+      <y>258</y>
+      <w>72</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;100.0;60.0;100.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1242</x>
+      <y>258</y>
+      <w>90</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;130.0;60.0;10.0;60.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1320</x>
+      <y>120</y>
+      <w>162</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>250.0;10.0;250.0;60.0;10.0;60.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1464</x>
+      <y>120</y>
+      <w>168</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;260.0;60.0;260.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>504</x>
+      <y>522</y>
+      <w>96</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>"Scene" est un enum 
+spécifiant à quel 
+moment du jeu le 
+joueur est.
+(menu, map, combat...)
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>414</x>
+      <y>312</y>
+      <w>210</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>Datas
+--
+-loadedCards: static boolean
+-cards: static TreeMap&lt;String, Card&gt;
+-cardsByClass: static TreeMap&lt;String, Card&gt;
+-cardsClassCateg: static TreeMap&lt;String, Card&gt;
+--
++addCard(card: Card): static void
++getCard(): static Card
++getAllCard(): static ArrayList&lt;Card&gt;
++getRandomCard(): Card</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>414</x>
+      <y>258</y>
+      <w>210</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Ici, seul les méthodes et champs pour stocker 
+les cartes sont montrées.
+Mais cette class contient aussi tous les 
+ennemies, boss, élites et potions, le tout stocké de
+deiverse manière en fonction du besoin. 
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>186</x>
+      <y>786</y>
+      <w>168</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Data
+--
++resolvePlayerAction(event: Event): Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>792</y>
+      <w>186</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>DataMainMenu
+--
+
+--
++resolvePlayerAction(event Event): Scene</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>858</y>
+      <w>186</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>DataPlayerChoice
+--
+
+--
++resolvePlayerAction(event Event): Scene</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>924</y>
+      <w>186</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>DataMap
+--
+
+--
++resolvePlayerAction(event Event): RoomType</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>990</y>
+      <w>186</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>DataBattleRoom
+--
+
+--
++resolvePlayerAction(event Event): Scene</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>1056</y>
+      <w>186</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>DataShopRoom
+--
+
+--
++resolvePlayerAction(event Event): Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>1122</y>
+      <w>186</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>DataDebugMod
+--
+
+--
++resolvePlayerAction(event Event): Scene</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>852</x>
+      <y>786</y>
+      <w>126</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>UI
+--
+FONT_SIZE: final int
+LINE_SPACE: final int
+MARGIN_TEXT: final int
+FONT: final Font
+TEXT_COLOR: final Color
+DEFAULT_BG: final Color
+BUTTON_HEIGHT: final int
+BUTTON_COLOR: final Color
+SELECT_COLOR: final Color
+--
++draw(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>792</y>
+      <w>108</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>UIMainMenu
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>990</y>
+      <w>108</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>UIBattleRoom
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>858</y>
+      <w>108</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>UIPlayerChoice
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>1122</y>
+      <w>108</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>UIDebugMod
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>1056</y>
+      <w>108</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>UIShopRoom
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>924</y>
+      <w>108</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>UIMap
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>786</x>
+      <y>792</y>
+      <w>132</w>
+      <h>348</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;60.0;10.0;60.0;560.0;10.0;560.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>786</x>
+      <y>786</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>786</x>
+      <y>852</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>786</x>
+      <y>918</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>786</x>
+      <y>984</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>786</x>
+      <y>1050</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>792</y>
+      <w>150</w>
+      <h>348</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0;180.0;560.0;230.0;560.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>372</x>
+      <y>786</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>372</x>
+      <y>852</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>372</x>
+      <y>918</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>372</x>
+      <y>984</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>372</x>
+      <y>1050</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>798</y>
+      <w>108</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=1
+m2=data</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>864</y>
+      <w>108</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=1
+m2=data</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>930</y>
+      <w>108</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=1
+m2=data</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>996</y>
+      <w>108</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=1
+m2=data</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>1062</y>
+      <w>108</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=1
+m2=data</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>1128</y>
+      <w>108</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=1
+m2=data</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>588</y>
+      <w>252</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>r2=1
+m2=data</panel_attributes>
+    <additional_attributes>10.0;340.0;10.0;20.0;400.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>588</y>
+      <w>234</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>r2=1
+m2=ui</panel_attributes>
+    <additional_attributes>370.0;340.0;370.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>846</y>
+      <w>108</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>r2=map
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;170.0;160.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>156</x>
+      <y>1098</y>
+      <w>162</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>ShopRoom
+--
+-hero: Hero
+--
++ShopRoom(hero Hero): ShopRoom
++buyCardsClass(): boolean
++buyCardsColorless(): boolean
++buyPotions(): boolean
++seeCardsClass(): CardItem[]
++seeCardsColorless(): CardItem[]
++seePotions(): PotionItem[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>1062</y>
+      <w>108</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>r2=shop
+m2=1</panel_attributes>
+    <additional_attributes>10.0;70.0;70.0;70.0;70.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>318</x>
+      <y>318</y>
+      <w>108</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=enemies
+m2=*</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>216</x>
+      <y>270</y>
+      <w>108</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Cette classe permet de 
+stocker les monstres pour
+faire des copies 
+indépendantes pour les 
+combats.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1110</y>
+      <w>84</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>CardItem
+--
+-card: Card
+-price: int
+-isOnSale: boolean
+--
++setOnSale(): void
++getCard(): Card
++getPrice(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1200</y>
+      <w>84</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>PotionItem
+--
+-card: Card
+-price: int
+--
++getCard(): Card
++getPrice(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>78</x>
+      <y>1104</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=cardsClass
+m2=0..5</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>78</x>
+      <y>1152</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>r2=potions
+m2=0..3</panel_attributes>
+    <additional_attributes>10.0;130.0;80.0;130.0;80.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>78</x>
+      <y>1128</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=cardsColorless
+m2=0..2</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>198</x>
+      <y>972</y>
+      <w>120</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Drop
+--
+gold: int
+potion: Potion
+cards: Card[3]
+potionDrop: static float
+--
+lootGold(): int
+lootPotion(): Potion
+lootCard(numCard: int): Card
+getGold(): int
+getPotion(): Potion
+getCards(): Card[]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>996</y>
+      <w>108</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=drop
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>318</x>
+      <y>636</y>
+      <w>144</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Button
+--
+posX: int
+posY: int
+width: int
+height: int
+bgColor: Color
+text: String
+img: BufferedImage
+--
+isClicked(event: Event): boolean
+display(graphics: Graphics2D): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1836</x>
+      <y>630</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Strategy
+--
+getAction(): EnemyAction
+checkAction(): EnemyAction</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1770</x>
+      <y>630</y>
+      <w>132</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r1=strategy
+m1=1</panel_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1932</x>
+      <y>864</y>
+      <w>144</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>SimpleStrategy
+--
+-startAction: EnemyAction
+-combo: int
+-lastAction: EnemyAction
+--
++addAction(elem StrategyElem): void
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1764</x>
+      <y>876</y>
+      <w>102</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>StrategyElem
+--
+-action: EnemyAction
+-weight: float
+-maxCombo: int
+--
++action(): EnemyAction
++weight(): float
++maxCombo(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1932</x>
+      <y>990</y>
+      <w>132</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>PatternStrategy
+--
+-curSelect: int
+-lastAction: EnemyAction
+--
++add(elem ElementPattern): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1764</x>
+      <y>1002</y>
+      <w>102</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>ElementPattern
+--
+-action: EnemyAction
+-weight: float
+-nextAction: int
+--
++action(): EnemyAction
++weight(): float
++nextAction(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1854</x>
+      <y>726</y>
+      <w>78</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>SupportStrategy
+--
+-actualStrategy: int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1854</x>
+      <y>786</y>
+      <w>78</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>LifeStrategy
+--
+-actualStrategy: int
+-ratioChange: float
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1860</x>
+      <y>870</y>
+      <w>84</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=actions
+m2=*</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1860</x>
+      <y>996</y>
+      <w>84</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=actions
+m2=*</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1896</x>
+      <y>636</y>
+      <w>216</w>
+      <h>372</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;340.0;10.0;340.0;600.0;280.0;600.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2070</x>
+      <y>858</y>
+      <w>42</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1926</x>
+      <y>780</y>
+      <w>186</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;290.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1926</x>
+      <y>720</y>
+      <w>186</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;290.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1800</x>
+      <y>636</y>
+      <w>66</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>r2=strategies
+m2=2</panel_attributes>
+    <additional_attributes>30.0;10.0;30.0;260.0;90.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1800</x>
+      <y>720</y>
+      <w>66</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>r2=strategies
+m2=2</panel_attributes>
+    <additional_attributes>30.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+</diagram>

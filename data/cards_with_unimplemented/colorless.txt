@@ -1,0 +1,400 @@
+name=Bandage Up
+imagePath=BandageUp.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Heal 4 HP. Exhaust.
+
+heal=4
+exhaust=1
+#
+name=Blind
+imagePath=Blind.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Apply 2  Weak .
+
+weak=2
+#
+name=Dark Shackles
+imagePath=DarkShackles.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Enemy loses 9 Strength for the rest of this turn. Exhaust.
+
+damageStrength=9
+strengthDownTarget=-9
+exhaust=1
+#
+name=Deep Breath
+imagePath=DeepBreath.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Shuffle your discard pile into your draw pile. Draw 1 card.
+
+shuffleDeck=1
+draw=1
+#
+name=Discovery
+imagePath=Discovery.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Choose 1 of 3 random cards to add to your hand. It costs 0 this turn. Exhaust. 
+
+chooseRandomCard=1
+#
+name=Dramatic Entrance
+imagePath=DramaticEntrance.png
+class=Colorless
+rarity=Uncommon
+category=Attack
+energyCost=0
+description=Innate. Deal 6 damage to ALL enemies. Exhaust.
+
+innate=1
+damage=6
+exhaust=1
+target=all
+#
+name=Enlightenment
+imagePath=Enlightenment.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Reduce the cost of cards in your hand to 1 this turn.
+
+changeHandCost=1
+keepEnergyCost=turn
+#
+name=Finesse
+imagePath=Finesse.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Gain 2  Block. Draw 1 card.
+
+block=2
+draw=1
+#
+name=Flash of Steel
+imagePath=FlashofSteel.png
+class=Colorless
+rarity=Uncommon
+category=Attack
+energyCost=0
+description=Deal 3 damage. Draw 1 card.
+
+damage=3
+draw=1
+#
+name=Forethought
+imagePath=Forethought.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Place a card from your hand on the bottom of your draw pile. It  costs 0 until played.
+
+transferHandCardToBottomDrawPile=1
+changeTargetCardCost=0
+#
+name=Good Instincts
+imagePath=GoodInstincts.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Gain 5 Block.
+
+block=5
+#
+name=Impatience
+imagePath=Impatience.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=If you have no Attack cards in your hand, draw 2 cards.
+
+drawBonus=2
+conditionBonus=no_attack_in_hand
+#
+name=Jack Of All Trades
+imagePath=JackOfAllTrades.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Add 1 random Colorless card to your hand. Exhaust.
+
+addRandomCard=1
+addRandomCardClass=Colorless
+targetPile=hand
+exhaust=1
+#
+name=Madness
+imagePath=Madness.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=A random card in your hand costs 0 for the rest of combat. Exhaust.
+
+changeRandomCardCost=0
+exhaust=1
+#
+name=Mind Blast
+imagePath=MindBlast.png
+class=Colorless
+rarity=Uncommon
+category=Attack
+energyCost=2
+description=Innate. Deal damage equal to the number of cards in your draw pile.
+
+innate=1
+mindBlast=1
+#
+name=Panacea
+imagePath=Panacea.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Gain 1 Artifact. Exhaust.
+
+artifact=1
+exhaust=1
+#
+name=Panic Button
+imagePath=PanicButton.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Gain 30  Block. You cannot gain  Block from cards for the next 2 turns. Exhaust.
+
+block=30
+noBlock=2
+exhaust=1
+#
+name=Purity
+imagePath=Purity.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Choose and exhaust 3 cards in your hand. Exhaust.
+
+exhaustHandCard=3
+exhaust=1
+#
+name=Swift Strike
+imagePath=SwiftStrike.png
+class=Colorless
+rarity=Uncommon
+category=Attack
+energyCost=0
+description=Deal 6 damage.
+
+damage=6
+#
+name=Trip
+imagePath=Trip.png
+class=Colorless
+rarity=Uncommon
+category=Skill
+energyCost=0
+description=Apply 2 Vulnerable.
+
+vulnerable=2
+#
+name=Apotheosis
+imagePath=Apotheosis.png
+class=Colorless
+rarity=Rare
+category=Skill
+energyCost=2
+description=Upgrade ALL of your cards for the rest of combat. Exhaust.
+
+upgradeHand=1
+exhaust=1
+#
+name=Chrysalis
+imagePath=Chrysalis.png
+class=Colorless
+rarity=Rare
+category=Skill
+energyCost=2
+description=Add 3 random Skills into your Draw Pile. They cost 0 this combat. Exhaust.
+
+exhaust=1
+addRandomCard=3
+addRandomCardClass=Player
+addRandomCardCategory=Skill
+addRandomCardCost=0
+targetPile=draw
+keepEnergyCost=Battle
+addCardToTopPile=0
+#
+name=Hand of Greed
+imagePath=HandOfGreed.png
+class=Colorless
+rarity=Rare
+category=Attack
+energyCost=2
+description=Deal 20 damage. If this kills a non-minion enemy, gain 20 Gold.
+
+damage=20
+goldBonus=20
+conditionBonus=kill
+#
+name=Magnetism
+imagePath=Magnetism.png
+class=Colorless
+rarity=Rare
+category=Power
+energyCost=2
+description=At the start of each turn, add a random colorless card to your hand.
+
+magnetism=1
+#
+name=Master Of Strategy
+imagePath=MasterOfStrategy.png
+class=Colorless
+rarity=Rare
+category=Skill
+energyCost=0
+description=Draw 3 cards. Exhaust.
+
+draw=3
+exhaust=1
+#
+name=Mayhem
+imagePath=Mayhem.png
+class=Colorless
+rarity=Rare
+category=Power
+energyCost=2
+description=At the start of your turn, play the top card of your draw pile.
+
+mayhem=1
+#
+name=Metamorphosis
+imagePath=Metamorphosis.png
+class=Colorless
+rarity=Rare
+category=Skill
+energyCost=2
+description=Add 3 random Attacks into your Draw Pile. They cost 0 this combat. Exhaust.
+
+exhaust=1
+addRandomCard=3
+addRandomCardClass=Player
+addRandomCardCategory=Attack
+addRandomCardCost=0
+targetPile=draw
+keepEnergyCost=Battle
+addCardToTopPile=0
+#
+name=Panache
+imagePath=Panache.png
+class=Colorless
+rarity=Rare
+category=Power
+energyCost=0
+description=Every time you play 5 cards in a single turn, deal 10 damage to ALL enemies.
+
+panache=10
+#
+name=Sadistic Nature
+imagePath=SadisticNature.png
+class=Colorless
+rarity=Rare
+category=Power
+energyCost=0
+description=Whenever you apply a Debuff to an enemy, they take 5 damage.
+
+sadistic=1
+#
+name=Secret Technique
+imagePath=SecretTechnique.png
+class=Colorless
+rarity=Rare
+category=Skill
+energyCost=0
+description=Choose a Skill from your draw pile and place it into your hand. Exhaust.
+
+transferSkillFromDrawToHand=1
+exhaust=1
+#
+name=Secret Weapon
+imagePath=SecretWeapon.png
+class=Colorless
+rarity=Rare
+category=Skill
+energyCost=0
+description=Choose an Attack from your draw pile and place it into your hand. Exhaust. 
+
+transferAttackFromDrawToHand=1
+exhaust=1
+#
+name=The Bomb
+imagePath=TheBomb.png
+class=Colorless
+rarity=Rare
+category=Skill
+energyCost=2
+description=At the end of 3 turns, deal 40 damage to ALL enemies.
+
+bomb=40
+#
+name=Thinking Ahead
+imagePath=ThinkingAhead.png
+class=Colorless
+rarity=Rare
+category=Skill
+energyCost=0
+description=Draw 2 cards. Place a card from your hand on top of your draw pile. Exhaust. 
+
+draw=2
+transferCardFromHandToTopDraw=1
+exhaust=1
+#
+name=Transmutation
+imagePath=Transmutation.png
+class=Colorless
+rarity=Rare
+category=Skill
+energyCost=-1
+description=Add X random  colorless cards into your hand. They cost 0 this turn. Exhaust.
+
+exhaust=1
+addRandomCardX=1
+addRandomCardClass=Colorless
+addRandomCardCost=0
+targetPile=hand
+keepEnergyCost=Turn
+#
+name=Violence
+imagePath=Violence.png
+class=Colorless
+rarity=Rare
+category=Skill
+energyCost=0
+description=Place 3 random Attack cards from your draw pile into your hand. Exhaust.
+
+exhaust=1
+getRandomCard=3
+getRandomCardCategory=Attack
+#

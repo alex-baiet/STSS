@@ -1,0 +1,12 @@
+Attack Potion : Add 1 of 3 random Attack cards to your hand, it costs 0 this turn.
+Colorless Potion : Choose 1 of 3 random Colorless cards to add to your hand, it costs 0 this turn.
+Duplication Potion : This turn, your next card is played twice. METTRE EFFET EN COMMON AVEC DOUBLE TAP
+Gambler's Brew : Discard any number of cards, then draw that many.
+Liquid Memories : Choose a card in your discard pile and return it to your hand. It costs 0 this turn.
+Power Potion : Add 1 of 3 random Power cards to your hand, it costs 0 this turn.
+Skill Potion : Add 1 of 3 random Skill cards to your hand, it costs 0 this turn.
+Snecko Oil : Draw 5 cards. Randomize the costs of all cards in your hand for the rest of the combat.
+
+##### NE VA PAS ÊTRE IMPLEMENTEE #####
+Blessing of the Forge : Upgrade all cards in your hand for the rest of combat. 
+Smoke Bomb : Escape from a non-boss combat. Receive no rewards.

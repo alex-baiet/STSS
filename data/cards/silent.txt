@@ -1,0 +1,633 @@
+name=Silent Defend
+imagePath=Defend_G.png
+class=Silent
+rarity=Starter
+category=Skill
+energyCost=1
+description=Gain 5 Block.
+
+block=5
+#
+name=Neutralize
+imagePath=Neutralize.png
+class=Silent
+rarity=Starter
+category=Attack
+energyCost=0
+description=Deal 3 damage. Apply 1 Weak.
+
+damage=3
+weak=1
+#
+name=Silent Strike
+imagePath=Strike_G.png
+class=Silent
+rarity=Starter
+category=Attack
+energyCost=1
+description=Deal 6 damage.
+
+damage=6
+#
+name=Backflip
+imagePath=Backflip.png
+class=Silent
+rarity=Common
+category=Skill
+energyCost=1
+description=Gain 5 block. Draw 2 cards.
+
+block=5
+draw=2
+#
+name=Bane
+imagePath=Bane.png
+class=Silent
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 7 damage. If the enemy is Poisoned, deal 7 damage again.
+
+damage=7
+damageBonus=7
+conditionBonus=target_poisoned
+#
+name=Blade Dance
+imagePath=BladeDance.png
+class=Silent
+rarity=Common
+category=Skill
+energyCost=1
+description=Add 2 Shivs to your hand.
+
+addCardToPile=Shiv
+addCardToPileNbr=2
+targetPile=hand
+#
+name=Cloak And Dagger
+imagePath=CloakAndDagger.png
+class=Silent
+rarity=Common
+category=Skill
+energyCost=1
+description=Gain 6 Block. Add 1 Shiv to your hand.
+
+block=6
+addCardToPile=Shiv
+addCardToPileNbr=1
+targetPile=hand
+#
+name=Dagger Spray
+imagePath=DaggerSpray.png
+class=Silent
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 4 damage to ALL enemies twice.
+
+damage=4
+target=all
+attackNbr=2
+#
+name=Deadly Poison
+imagePath=DeadlyPoison.png
+class=Silent
+rarity=Common
+category=Skill
+energyCost=1
+description=Apply 5 Poison.
+
+poison=5
+#
+name=Deflect
+imagePath=Deflect.png
+class=Silent
+rarity=Common
+category=Skill
+energyCost=0
+description=Gain 4 Block.
+
+block=4
+#
+name=Dodge and Roll
+imagePath=DodgeandRoll.png
+class=Silent
+rarity=Common
+category=Skill
+energyCost=1
+description=Gain 4 Block. Next turn gain 4 Block.
+
+block=4
+blockNextTurn=4
+#
+name=Flying Knee
+imagePath=FlyingKnee.png
+class=Silent
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 8 damage. Next turn gain 1 Energy.
+
+damage=8
+energyGainNextTurn=1
+#
+name=Outmaneuver
+imagePath=Outmaneuver.png
+class=Silent
+rarity=Common
+category=Skill
+energyCost=1
+description=Next turn gain 2 Energy.
+
+energyGainNextTurn=2
+#
+name=Piercing Wail
+imagePath=PiercingWail.png
+class=Silent
+rarity=Common
+category=Skill
+energyCost=1
+description=ALL enemies lose 6 Strength for 1 turn. Exhaust.
+
+damageStrength=6
+strengthDownTarget=-6
+target=all
+exhaust=1
+#
+name=Poisoned Stab
+imagePath=PoisonedStab.png
+class=Silent
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 6 damage. Apply 3 Poison.
+
+damage=6
+poison=3
+#
+name=Quick Slash
+imagePath=QuickSlash.png
+class=Silent
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 8 damage. Draw 1 card.
+
+damage=8
+draw=1
+#
+name=Slice
+imagePath=Slice.png
+class=Silent
+rarity=Common
+category=Attack
+energyCost=0
+description=Deal 5 damage.
+
+damage=5
+#
+name=Sucker Punch
+imagePath=SuckerPunch.png
+class=Silent
+rarity=Common
+category=Attack
+energyCost=1
+description=Deal 7 damage. Apply 1 Weak.
+
+damage=7
+weak=1
+#
+name=Accuracy
+imagePath=Accuracy.png
+class=Silent
+rarity=Uncommon
+category=Power
+energyCost=1
+description=Shivs deal 3 additional damage.
+
+accuracy=3
+#
+name=Backstab
+imagePath=Backstab.png
+class=Silent
+rarity=Uncommon
+category=Attack
+energyCost=0
+description=Deal 11 damage. Innate. Exhaust.
+
+damage=11
+innate=1
+exhaust=1
+#
+name=Blur
+imagePath=Blur.png
+class=Silent
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Gain 5 Block. Block is not removed at the start of your next turn.
+
+block=5
+keepBlock=1
+#
+name=Bouncing Flask
+imagePath=BouncingFlask.png
+class=Silent
+rarity=Uncommon
+category=Skill
+energyCost=2
+description=Apply 3 poison to a random enemy 3 times.
+
+poison=3
+target=random
+attackNbr=3
+#
+name=Caltrops
+imagePath=Caltrops.png
+class=Silent
+rarity=Uncommon
+category=Power
+energyCost=1
+description=Whenever you are attacked, deal 3 damage to the attacker.
+
+thorns=3
+#
+name=Catalyst
+imagePath=Catalyst.png
+class=Silent
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Double an enemy's Poison. Exhaust.
+
+poisonMultiplier=2
+exhaust=1
+#
+name=Choke
+imagePath=Choke.png
+class=Silent
+rarity=Uncommon
+category=Attack
+energyCost=2
+description=Deal 12 damage. Whenever you play a card this turn, targeted enemy loses 3 HP.
+
+damage=12
+choke=3
+#
+name=Crippling Cloud
+imagePath=CripplingCloud.png
+class=Silent
+rarity=Uncommon
+category=Skill
+energyCost=2
+description=Apply 4 Poison and 2 Weak to ALL enemies. Exhaust.
+
+poison=4
+weak=2
+target=all
+exhaust=1
+#
+name=Dash
+imagePath=Dash.png
+class=Silent
+rarity=Uncommon
+category=Attack
+energyCost=2
+description=Gain 10 Block. Deal 10 damage.
+
+damage=10
+block=10
+#
+name=Distraction
+imagePath=Distraction.png
+class=Silent
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Add a random Skill to your hand. It costs 0 this turn. Exhaust.
+
+addRandomCard=1
+addRandomCardClass=Silent
+addRandomCardCategory=Skill
+targetPile=hand
+exhaust=1
+#
+name=Endless Agony
+imagePath=EndlessAgony.png
+class=Silent
+rarity=Uncommon
+category=Attack
+energyCost=0
+description=Whenever you draw this card, add a copy of it to your hand. Deal 4 damage. Exhaust.
+
+addCopyOnDraw=1
+damage=4
+exhaust=1
+#
+name=Expertise
+imagePath=Expertise.png
+class=Silent
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Draw cards until you have 6 in your hand.
+
+fillHand=6
+#
+name=Finisher
+imagePath=Finisher.png
+class=Silent
+rarity=Uncommon
+category=Attack
+energyCost=1
+description=Deal 6 damage for each Attack played this turn.
+
+finisher=6
+#
+name=Flechettes
+imagePath=Flechettes.png
+class=Silent
+rarity=Uncommon
+category=Attack
+energyCost=1
+description=Deal 4 damage for each Skill in your hand.
+
+flechettes=4
+#
+name=Footwork
+imagePath=Footwork.png
+class=Silent
+rarity=Uncommon
+category=Power
+energyCost=1
+description=Gain 2 Dexterity.
+
+dexterity=2
+#
+name=Heel Hook
+imagePath=HeelHook.png
+class=Silent
+rarity=Uncommon
+category=Attack
+energyCost=1
+description=Deal 5 damage. If the enemy is Weak, Gain 1 Energy and draw 1 card.
+
+damage=5
+energyGainBonus=1
+drawBonus=1
+conditionBonus=weak_on_enemy
+#
+name=Infinite Blades
+imagePath=InfiniteBlades.png
+class=Silent
+rarity=Uncommon
+category=Power
+energyCost=1
+description= At the start of your turn, add a Shiv to your hand.
+
+infiniteBlades=1
+#
+name=Leg Sweep
+imagePath=LegSweep.png
+class=Silent
+rarity=Uncommon
+category=Skill
+energyCost=2
+description=Apply 2 Weak. Gain 11 Block.
+
+weak=2
+block=11
+#
+name=Masterful Stab
+imagePath=MasterfulStab.png
+class=Silent
+rarity=Uncommon
+category=Attack
+energyCost=0
+description=Costs 1 additional Energy for each time you lose HP this combat. Deal 12 damage.
+
+damage=12
+costBonusForEachWound=1
+#
+name=Noxious Fumes
+imagePath=NoxiousFumes.png
+class=Silent
+rarity=Uncommon
+category=Power
+energyCost=1
+description=At the start of your turn, apply 2 Poison to ALL enemies.
+
+noxiousFumes=2
+#
+name=Predator
+imagePath=Predator.png
+class=Silent
+rarity=Uncommon
+category=Attack
+energyCost=2
+description=Deal 15 damage. Draw 2 more cards next turn.
+
+damage=15
+drawNextTurn=2
+#
+name=Riddle With Holes
+imagePath=RiddleWithHoles.png
+class=Silent
+rarity=Uncommon
+category=Attack
+energyCost=2
+description=Deal 3 damage 5 times.
+
+damage=3
+attackNbr=5
+#
+name=Skewer
+imagePath=Skewer.png
+class=Silent
+rarity=Uncommon
+category=Attack
+energyCost=-1
+description=Deal 7 damage X times.
+
+damage=7
+attackNbrX=1
+#
+name=Terror
+imagePath=Terror.png
+class=Silent
+rarity=Uncommon
+category=Skill
+energyCost=1
+description=Apply 99 Vulnerable. Exhaust.
+
+vulnerable=99
+exhaust=1
+#
+name=A Thousand Cuts
+imagePath=AThousandCuts.png
+class=Silent
+rarity=Rare
+category=Power
+energyCost=2
+description=Whenever you play a card, deal 1 damage to ALL enemies.
+
+aThousandCuts=1
+#
+name=Adrenaline
+imagePath=Adrenaline.png
+class=Silent
+rarity=Rare
+category=Skill
+energyCost=0
+description=Gain 1 Energy. Draw 2 cards. Exhaust.
+
+energyGain=1
+draw=2
+exhaust=1
+#
+name=After Image
+imagePath=AfterImage.png
+class=Silent
+rarity=Rare
+category=Power
+energyCost=1
+description= Whenever you play a card, gain 1 Block.
+
+afterImage=1
+#
+name=Alchemize
+imagePath=Alchemize.png
+class=Silent
+rarity=Rare
+category=Skill
+energyCost=1
+description=Obtain a random potion. Exhaust.
+
+fillEmptyPotion=1
+exhaust=1
+#
+name=Bullet Time
+imagePath=BulletTime.png
+class=Silent
+rarity=Rare
+category=Skill
+energyCost=3
+description=You cannot draw additional cards this turn. Reduce the cost of cards in your hand to 0 this turn.
+
+noDraw=1
+changeHandCost=0
+keepEnergyCost=turn
+#
+name=Burst
+imagePath=Burst.png
+class=Silent
+rarity=Rare
+category=Skill
+energyCost=1
+description=This turn your next 1 Skill is played twice.
+
+burst=1
+// VOIR DOUBLE TAP
+#
+name=Corpse Explosion
+imagePath=CorpseExplosion.png
+class=Silent
+rarity=Rare
+category=Skill
+energyCost=2
+description=Apply 6 Poison. When the enemy dies, deal damage equal to its max HP to ALL enemies.
+
+poison=6
+explodeOnDeath=1
+#
+name=Die Die Die
+imagePath=DieDieDie.png
+class=Silent
+rarity=Rare
+category=Attack
+energyCost=1
+description=Deal 13 damage to ALL enemies. Exhaust.
+
+damage=13
+target=all
+exhaust=1
+#
+name=Doppelganger
+imagePath=Doppelganger.png
+class=Silent
+rarity=Rare
+category=Skill
+energyCost=-1
+description=Next turn, draw X cards and gain X Energy.
+
+drawNextTurnX=1
+energyGainNextTurnX=1
+exhaust=1
+#
+name=Envenom
+imagePath=Envenom.png
+class=Silent
+rarity=Rare
+category=Power
+energyCost=2
+description=Whenever an attack deals unblocked damage, apply 1 Poison.
+
+envenom=1
+#
+name=Glass Knife
+imagePath=GlassKnife.png
+class=Silent
+rarity=Rare
+category=Attack
+energyCost=1
+description=Deal 8 damage twice. Glass Knife's damage is lowered by 2 this combat.
+
+damage=8
+attackNbr=2
+damageUpBattle=-2
+#
+name=Grand Finale
+imagePath=GrandFinale.png
+class=Silent
+rarity=Rare
+category=Attack
+energyCost=0
+description=Can only be played if there are no cards in your draw pile. Deal 50 damage to ALL enemies.
+
+damageBonus=50
+target=all
+conditionBonus=drawpile_empty
+#
+name=Malaise
+imagePath=Malaise.png
+class=Silent
+rarity=Rare
+category=Skill
+energyCost=-1
+description=Enemy loses X Strength. Apply X Weak. Exhaust.
+
+damageStrengthX=1
+weakX=1
+exhaust=1
+#
+name=Phantasmal Killer
+imagePath=PhantasmalKiller.png
+class=Silent
+rarity=Rare
+category=Skill
+energyCost=2
+description=On your next turn, your Attack damage is doubled.
+
+phantasmalKiller=1
+#
+name=Wraith Form
+imagePath=WraithForm.png
+class=Silent
+rarity=Rare
+category=Power
+energyCost=3
+description=Gain 2 Intangible. At the end of your turn, lose 1 Dexterity.
+
+intangible=2
+dexterityDown=1
+#
